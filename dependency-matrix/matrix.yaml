@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: cymobot
+  repo: jenkins-x-quickstart
+  url: https://github.com/cymobot/jenkins-x-quickstart.git
+  version: ""
+  versionURL: ""

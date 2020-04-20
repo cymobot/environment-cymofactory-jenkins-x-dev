@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: cymobot
+    provider: github
+    repository: jenkins-x-quickstart
+  name: cymobot-jenkins-x-quickstart
+spec:
+  description: Imported application for cymobot/jenkins-x-quickstart
+  httpCloneURL: https://github.com/cymobot/jenkins-x-quickstart.git
+  org: cymobot
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jenkins-x-quickstart
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/cymobot/jenkins-x-quickstart.git
