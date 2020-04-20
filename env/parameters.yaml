@@ -1,0 +1,10 @@
+adminUser:
+  password: vault:cymofactory-jenkins-x/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: amaury.mylonas+cymobot@gmail.com
+  token: vault:cymofactory-jenkins-x/pipelineUser:token
+  username: cymobot
+prow:
+  hmacToken: vault:cymofactory-jenkins-x/prow:hmacToken

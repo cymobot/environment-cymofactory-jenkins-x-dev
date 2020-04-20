@@ -4,4 +4,4 @@ description: ACME Chart
 maintainers:
 - name: Team
 name: acme
-version: 2.0.1245+cjxd.8
+version: "1"

@@ -1,39 +1,84 @@
 autoUpdate:
   enabled: false
   schedule: ""
+bootConfigURL: https://github.com/cloudbees/cloudbees-jenkins-x-boot-config.git
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  environmentGitPublic: true
-  project: ""
   azure: {}
+  clusterName: cymofactory-jenkins-x
+  devEnvApprovers:
+  - dun4n
+  - cymobot
+  environmentGitOwner: AXA-Climate
+  environmentGitPublic: true
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: cymo-factory-jenkins-x
   provider: gke
-  zone: ""
-gitops: true
+  registry: gcr.io
+  zone: europe-west1-b
 environments:
-  - key: dev
-  - key: staging
-  - key: production
+- ingress:
+    domain: 35.195.82.189.nip.io
+    externalDNS: false
+    namespaceSubDomain: -jx.
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: dev
+  repository: environment-cymofactory-jenkins-x-dev
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: staging
+  repository: environment-cymofactory-jenkins-x-staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: production
+  repository: environment-cymofactory-jenkins-x-production
+gitops: true
 ingress:
-  domain: ""
+  domain: 35.195.82.189.nip.io
   externalDNS: false
+  namespaceSubDomain: -jx.
   tls:
     email: ""
     enabled: false
     production: false
 kaniko: true
+repository: nexus
 secretStorage: vault
 storage:
+  backup:
+    enabled: false
+    url: ""
   logs:
     enabled: true
-    url: ""
+    url: gs://cymofactory-jenkins-x-logs-4d9c91c9-c374-4771-a581-2a84
   reports:
     enabled: true
-    url: ""
+    url: gs://cymofactory-jenkins-x-reports-eced114d-8f23-459c-9956-4
   repository:
     enabled: true
-    url: ""
+    url: gs://cymofactory-jenkins-x-repository-b4b051e9-2fbd-42d5-aa8
+vault: {}
+velero:
+  schedule: ""
+  ttl: ""
 versionStream:
-  ref: 2.0.1245+cjxd.8
+  ref: v0.0.29
   url: https://github.com/cloudbees/cloudbees-jenkins-x-versions.git
 webhook: prow
