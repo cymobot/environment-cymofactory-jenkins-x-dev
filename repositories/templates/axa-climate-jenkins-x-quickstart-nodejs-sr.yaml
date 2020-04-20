@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: AXA-Climate
+    provider: github
+    repository: jenkins-x-quickstart-nodejs
+  name: axa-climate-jenkins-x-quickstart-nodejs
+spec:
+  description: Imported application for AXA-Climate/jenkins-x-quickstart-nodejs
+  httpCloneURL: https://github.com/AXA-Climate/jenkins-x-quickstart-nodejs.git
+  org: AXA-Climate
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jenkins-x-quickstart-nodejs
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/AXA-Climate/jenkins-x-quickstart-nodejs.git

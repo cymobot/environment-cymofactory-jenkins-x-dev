@@ -5,3 +5,9 @@ dependencies:
   url: https://github.com/cymobot/jenkins-x-quickstart.git
   version: ""
   versionURL: ""
+- host: github.com
+  owner: AXA-Climate
+  repo: jenkins-x-quickstart-nodejs
+  url: https://github.com/AXA-Climate/jenkins-x-quickstart-nodejs.git
+  version: ""
+  versionURL: ""
